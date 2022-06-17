@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/2fbd3d083d.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="./images/logo.svg" alt="logo">
+  </div>
+  <div class="nav-menu">
+    <div class="menu features"><a href="#">Features</a></div>
+    <div class="menu team"><a href="#">Team</a></div>
+    <div class="menu sign"><a href="#">Sign In</a></div>
+  </div>
+</header>
+<main>
+  <div class="container-top">
+    <div class="contant-top-left">
+      <h1>  All your files in one secure location, accessible anywhere.</h1>
+      <p>Fylo stores your most important files in one secure location. 
+        Access them wherever you need, share and collaborate with friends, 
+        family, and co-workers.</p>
+        <form action="#">
+          <div class="input-box">
+            <input class="input" type="text" placeholder="Enter your email">
+            <input class="button" type="submit" value="Check">
+          </div>
+          <p class="text"></p>
+        </form>
+        <script>
+        const form = document.querySelector("form"),
+        eInput = form.querySelector(".input"),
+        text = form.querySelector(".text");
+      
+        form.addEventListener("submit", (e)=>{
+          e.preventDefault(); 
+          let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
+          form.classList.add("error");
+          form.classList.remove("valid");
+          if(eInput.value == ""){
+            text.innerText = "Email can't be blank";
+          }else if (!eInput.value.match(pattern) ) { 
+            text.innerText = "Please enter a valid email";
+          }else{
+            form.classList.replace("error" , "valid"); 
+            text.innerText = "This is a valid email";
+          }
+        });
+        </script>
+    </div>
+    <div class="content-top-right">
+      <img src="./images/illustration-1.svg">
+    </div>
+  </div>
+  <!--content center-->
+  <div class="container-center">
+    <img src="./images/bg-curve-desktop.svg">
+    <div class="content-center-left">
+      <div class="con top">
+        <h1>  Stay productive, wherever you are </h1>
+        <p>Never let location be an issue when accessing your files. Fylo has you 
+          covered for all of your file storage needs.</p>
+          <p> Securely share files and folders with friends, family and colleagues for 
+            live collaboration. No email attachments required!</p>
+          <a href="#"> See how Fylo works <i class="fa-solid fa-circle-arrow-right"></i> </a>
+            
+      </div>
+      <div class="con-center">
+          <div class="card-text">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>  Fylo has improved our team productivity by an order of magnitude. Since 
+            making the switch our team has become a well-oiled collaboration machine.</p>
+          </div>
+          <div class="card-proflie">
+            <div class="profile-img"><img src="./images/avatar-testimonial.jpg" width="60px"></div>
+            <div class="profile-text">
+              <h4>  Kyle Burton </h4>
+              <p>  Founder & CEO, Huddle</p>
+            </div>
+          </div>
+      </div>
+       
+    </div>
+    <div class="content-center-right">
+      <img src="./images/illustration-2.svg">
+    </div>
+  </div>
+
+    <!--content bottom-->
+  <div class="container-bottom">
+    <div class="con-bottom-text">
+      <h1>  Get early access today </h1>
+      <p>It only takes a minute to sign up and our free starter tier is extremely generous. 
+        If you have any questions, our support team would be happy to help you.</p>
+    </div>
+    <div class="con-bottom-button">
+      <form action="#" class="form2">
+        <input class="input2" type="text" placeholder="email@example.com">
+        <input class="button2" type="submit" value="Get Started For Free">
+      <p class="text2"></p>
+    </form>
+    
+    <script>
+    const form2 = document.querySelector(".form2"),
+    eInput2 = form2.querySelector(".input2"),
+    text2 = form2.querySelector(".text2");
+    
+    form2.addEventListener("submit", (i)=>{
+      i.preventDefault(); 
+      let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
+      form2.classList.add("error");
+      form2.classList.remove("valid");
+      if(eInput.value == ""){
+        text2.innerText = "Email can't be blank";
+      }else if (!eInput.value.match(pattern) ) { 
+        text2.innerText = "Please enter a valid email";
+      }else{
+        form2.classList.replace("error" , "valid"); 
+        text2.innerText = "This is a valid email";
+      }
+    });
+    </script>
+    </div>  
+  </div>
+  
+</main>
+<footer>
+  <div class="footter-1"><img src="./images/logo white.svg"></div>
+
+  <div class="footter-two">
+    <div class="footter-2">
+      <div class="phone">
+        <img src="./images/icon-phone.svg" alt="Phone">Phone: +1-543-123-4567
+      </div>
+      <div class="meil">
+        <img src="./images/icon-email.svg" alt="mail">example@fylo.com
+      </div>
+    </div>
+   
+    <div class="footter-3">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#"> Jobs</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+
+    <div class="footter-4">
+      <div class="icon face"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+      <div class="icon twitter"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+      <div class="icon ig"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+    </div>
+  </div>
+  <p class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </p>
+</footer>
+</body>
+</html>
